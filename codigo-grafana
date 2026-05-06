@@ -1,27 +1,27 @@
-<div style="background-color: white !important; color: black !important; padding: 10px; font-family: Arial, sans-serif; height: 100vh;">
+<div style="background-color: white !important; color: black !important; padding: 0; margin: 0; font-family: Arial, sans-serif; overflow: hidden;">
   
-  <div style="background-color: white !important; color: black !important; text-align: center; font-size: 28px; font-weight: bold; padding: 10px; border: 1px solid #ccc; border-bottom: none;">
+  <div style="background-color: white !important; color: black !important; text-align: center; font-size: 26px; font-weight: bold; padding: 10px; border: 1px solid #ccc; border-bottom: none;">
     CREDITO INSS
   </div>
 
-  <table style="width: 100%; border-collapse: collapse; background-color: white !important;">
+  <table style="width: 100%; border-collapse: collapse; background-color: white !important; table-layout: fixed;">
     <thead>
       <tr style="background-color: white !important;">
-        <th style="border: 1px solid #ccc; padding: 10px; text-align: left; color: black !important; font-size: 14px; background-color: white !important;">SITUACAO</th>
-        <th style="border: 1px solid #ccc; padding: 10px; text-align: left; color: black !important; font-size: 14px; background-color: white !important;">DESBLOQUEOU</th>
-        <th style="border: 1px solid #ccc; padding: 10px; text-align: left; color: black !important; font-size: 14px; background-color: white !important;">QTDE</th>
+        <th style="border: 1px solid #ccc; padding: 8px; text-align: left; color: black !important; font-size: 14px; background-color: white !important;">SITUACAO</th>
+        <th style="border: 1px solid #ccc; padding: 8px; text-align: left; color: black !important; font-size: 14px; background-color: white !important;">DESBLOQUEOU</th>
+        <th style="border: 1px solid #ccc; padding: 8px; text-align: left; color: black !important; font-size: 14px; background-color: white !important;">QTDE</th>
       </tr>
     </thead>
     <tbody>
       {{#each data}}
       <tr style="background-color: white !important;">
-        <td style="border: 1px solid #ccc; padding: 12px; font-size: 36px; font-weight: bold; color: black !important; background-color: white !important;">
+        <td style="border: 1px solid #ccc; padding: 10px; font-size: 34px; font-weight: bold; color: black !important; background-color: white !important; white-space: nowrap;">
           {{SITUACAO}}
         </td>
-        <td style="border: 1px solid #ccc; padding: 12px; font-size: 36px; font-weight: bold; color: black !important; background-color: white !important;">
+        <td style="border: 1px solid #ccc; padding: 10px; font-size: 34px; font-weight: bold; color: black !important; background-color: white !important; white-space: nowrap;">
           {{DESBLOQUEOU}}
         </td>
-        <td style="border: 1px solid #ccc; padding: 12px; font-size: 36px; font-weight: bold; color: black !important; background-color: white !important;">
+        <td style="border: 1px solid #ccc; padding: 10px; font-size: 34px; font-weight: bold; color: black !important; background-color: white !important; white-space: nowrap;">
           {{QTDE}}
         </td>
       </tr>
