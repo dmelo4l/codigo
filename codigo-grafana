@@ -1,0 +1,85 @@
+# HTML
+
+<div class="card-container">
+  <div class="header-main">Titulo</div>
+  <table class="tabela-branca">
+    <thead>
+      <tr>
+        <th>SITUACAO</th>
+        <th>DESBLOQUEOU</th>
+        <th>QTDE</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td>{{SITUACAO}}</td>
+        <td>{{DESBLOQUEOU}}</td>
+        <td>{{QTDE}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+# CSS
+
+
+/* Container que força o fundo branco e esconde o fundo escuro do Grafana */
+.card-container {
+    background-color: white;
+    color: black;
+    height: 100%;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* O Cabeçalho Master (Preto com Amarelo) */
+.header-main {
+    background-color: #000000;
+    color: #FFD700; /* Amarelo */
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* Estilo da Tabela */
+.tabela-branca {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Títulos das colunas */
+.tabela-branca th {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    color: #555;
+    text-align: left;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Células com números grandes e pretos */
+.tabela-branca td {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 15px 10px;
+    font-size: 40px; /* Tamanho grande como na foto */
+    font-weight: bold;
+    color: black;
+}
+
+/* Linha pontilhada opcional entre os dados */
+.tabela-branca tr {
+    border-bottom: 1px solid #eee;
+}
+
+
+
+
+
