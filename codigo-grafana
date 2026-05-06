@@ -76,3 +76,39 @@
 }
 
 
+
+
+
+
+<div style="background-color: white; color: black; min-height: 100%; font-family: Arial, sans-serif; padding: 0; margin: 0;">
+  
+  <div style="background-color: #000; color: #FFD700; text-align: center; font-size: 26px; font-weight: bold; padding: 15px; text-transform: uppercase;">
+    CREDITO INSS
+  </div>
+
+  <table style="width: 100%; border-collapse: collapse; background-color: white;">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th style="border: 1px solid #ccc; padding: 10px; text-align: left; color: #333; font-size: 14px;">SITUACAO</th>
+        <th style="border: 1px solid #ccc; padding: 10px; text-align: left; color: #333; font-size: 14px;">DESBLOQUEOU</th>
+        <th style="border: 1px solid #ccc; padding: 10px; text-align: left; color: #333; font-size: 14px;">QTDE</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td style="border: 1px solid #eee; padding: 15px 10px; font-size: 38px; font-weight: bold; color: black;">
+          {{SITUACAO}}
+        </td>
+        <td style="border: 1px solid #eee; padding: 15px 10px; font-size: 38px; font-weight: bold; color: black;">
+          {{DESBLOQUEOU}}
+        </td>
+        <td style="border: 1px solid #eee; padding: 15px 10px; font-size: 38px; font-weight: bold; color: black;">
+          {{QTDE}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
