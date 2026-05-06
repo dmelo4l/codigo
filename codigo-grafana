@@ -1,8 +1,8 @@
 # HTML
 
-<div class="card-container">
-  <div class="header-main">Titulo</div>
-  <table class="tabela-branca">
+<div class="container-geral">
+  <div class="titulo-preto">CREDITO INSS</div>
+  <table class="tabela-custom">
     <thead>
       <tr>
         <th>SITUACAO</th>
@@ -29,57 +29,50 @@
 # CSS
 
 
-/* Container que força o fundo branco e esconde o fundo escuro do Grafana */
-.card-container {
-    background-color: white;
-    color: black;
+/* Força o fundo branco no painel inteiro */
+.container-geral {
+    background-color: white !important;
+    color: black !important;
     height: 100%;
-    padding: 0;
-    font-family: sans-serif;
+    min-height: 400px;
 }
 
-/* O Cabeçalho Master (Preto com Amarelo) */
-.header-main {
+/* Faixa preta com título amarelo */
+.titulo-preto {
     background-color: #000000;
-    color: #FFD700; /* Amarelo */
+    color: #FFD700;
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
-    padding: 10px 0;
+    padding: 12px;
+    text-transform: uppercase;
 }
 
-/* Estilo da Tabela */
-.tabela-branca {
+/* Estilo da tabela */
+.tabela-custom {
     width: 100%;
     border-collapse: collapse;
+    background-color: white;
 }
 
-/* Títulos das colunas */
-.tabela-branca th {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-    color: #555;
-    text-align: left;
+/* Cabeçalho cinza claro */
+.tabela-custom th {
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
     padding: 8px;
+    text-align: left;
     font-size: 14px;
 }
 
 /* Células com números grandes e pretos */
-.tabela-branca td {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    padding: 15px 10px;
-    font-size: 40px; /* Tamanho grande como na foto */
+.tabela-custom td {
+    color: black !important;
+    font-size: 36px;
     font-weight: bold;
-    color: black;
+    padding: 15px 10px;
+    border: 1px solid #eee;
+    text-align: left;
 }
-
-/* Linha pontilhada opcional entre os dados */
-.tabela-branca tr {
-    border-bottom: 1px solid #eee;
-}
-
-
-
 
 
