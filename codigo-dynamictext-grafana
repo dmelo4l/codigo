@@ -65,3 +65,9 @@
     </tbody>
   </table>
 </div>
+
+
+
+
+
+sudo grafana-cli plugins install marcusolsson-dynamictext-panel
