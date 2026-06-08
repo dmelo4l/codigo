@@ -10,8 +10,8 @@
     <templates>
         <template>
             <uuid>b2d2396ce68d428ebb36e6ff5adf797e</uuid>
-            <template>Template Monitoramento Logs PIX Automacao</template>
-            <name>Template Monitoramento Logs PIX Automacao</name>
+            <template>Template Monitoramento Logs PIX</template>
+            <name>Template Monitoramento Logs PIX</name>
             <groups>
                 <group>
                     <name>Templates/Applications</name>
