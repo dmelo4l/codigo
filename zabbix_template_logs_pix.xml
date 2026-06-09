@@ -3,15 +3,15 @@
     <version>6.4</version>
     <template_groups>
         <template_group>
-            <uuid>0bedc465e4644cdfa35e44b050f51897</uuid>
+            <uuid>15f124f8178d488ebd4fad492b360028</uuid>
             <name>Templates/Applications</name>
         </template_group>
     </template_groups>
     <templates>
         <template>
-            <uuid>b2d2396ce68d428ebb36e6ff5adf797e</uuid>
-            <template>Template Monitoramento Logs PIX</template>
-            <name>Template Monitoramento Logs PIX</name>
+            <uuid>3c1eed87c4dd4f57b831cce61efebcde</uuid>
+            <template>Template Monitoramento Logs PIX Automacao</template>
+            <name>Template Monitoramento Logs PIX Automacao</name>
             <groups>
                 <group>
                     <name>Templates/Applications</name>
@@ -19,10 +19,10 @@
             </groups>
             <items>
                 <item>
-                    <uuid>2dcad1500db14ddd8090fa29f328caf1</uuid>
+                    <uuid>d8296d6a459f4675a1dee44eea455ada</uuid>
                     <name>Log PIX: claims (log)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-Dict-Worker\\claims\\logs\\log.*\.log&quot;,&quot;The server was not found or was not accessible|The semaphore timeout period has expired|The request was canceled due to the configured HttpClient\.Timeout of 5 seconds elapsing&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-Dict-Worker/claims/logs/log.*\\.log&quot;,&quot;The server was not found or was not accessible|The semaphore timeout period has expired|The request was canceled due to the configured HttpClient\.Timeout of 5 seconds elapsing&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -35,10 +35,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>4ae3b3a17e7f47c6b09539cceef84a01</uuid>
+                    <uuid>74180448d0ab4c33a554329acca8635c</uuid>
                     <name>Log PIX: gRPC (log)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-Dict-Worker\\gRPC\\logs\\log.*\.log&quot;,&quot;\[Error\] Erro Envio Bacen|No such host is known|The semaphore timeout period has expired&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-Dict-Worker/gRPC/logs/log.*\\.log&quot;,&quot;\[Error\] Erro Envio Bacen|No such host is known|The semaphore timeout period has expired&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -51,10 +51,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>50780114f8a541038c0b8aee127655c9</uuid>
+                    <uuid>cb7901a269b146b584a0c12ca88b4b79</uuid>
                     <name>Log PIX: gRPC (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-Dict-Worker\\gRPC\\logs\\log.*\.txt&quot;,&quot;The SSL connection could not be established&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-Dict-Worker/gRPC/logs/log.*\\.txt&quot;,&quot;The SSL connection could not be established&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -67,10 +67,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>8f313172fe67428fa38746f706088d08</uuid>
+                    <uuid>c2c5dddf57744727a0825dc1df5c1143</uuid>
                     <name>Log PIX: worker.atualizacaolog (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.atualizacaolog\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.atualizacaolog/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -83,10 +83,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>7a1bfb18830a4c17ae297c5d48edaccb</uuid>
+                    <uuid>d47ad80bb0b6487292b785230187fc1e</uuid>
                     <name>Log PIX: worker.atualizacaologapibacen (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.atualizacaologapibacen\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.atualizacaologapibacen/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -99,10 +99,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>f93240072b964df0bffa44df4d4297e2</uuid>
+                    <uuid>26e7c05891e14d3fb9d858f46013c35d</uuid>
                     <name>Log PIX: worker.atualizacaologbacen (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.atualizacaologbacen\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.atualizacaologbacen/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -115,10 +115,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>85c0c5931362424d8fb9bf33056f7150</uuid>
+                    <uuid>e417ef2688be4ef4a061810335663674</uuid>
                     <name>Log PIX: worker.atualizacaologmensageria (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.atualizacaologmensageria\\logs\\llog.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.atualizacaologmensageria/logs/llog.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -131,10 +131,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>291a3dd50ca5411094bebde68bcfd406</uuid>
+                    <uuid>f67f43a96fdb416e96b70f2133c62eab</uuid>
                     <name>Log PIX: worker.atualizacaologretornobacen (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.atualizacaologretornobacen\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.atualizacaologretornobacen/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -147,10 +147,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>60eab0f5c04a4ce89e9946306352fcf1</uuid>
+                    <uuid>ae855b2970c341f888e6dbcb84944333</uuid>
                     <name>Log PIX: worker.atualizacaosaldo (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.atualizacaosaldo\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.atualizacaosaldo/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -163,10 +163,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>2d361798820b44a58a37a7a3c868094f</uuid>
+                    <uuid>fb458218a85947e193af3fe438b578b7</uuid>
                     <name>Log PIX: worker.caching (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.caching\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.caching/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -179,10 +179,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>fdf27f5052dc4c2ebd189025c4edeaf6</uuid>
+                    <uuid>010f837ced034d95ae1ad321ab16c251</uuid>
                     <name>Log PIX: worker.filacripto (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filacripto\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filacripto/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -195,10 +195,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>e739a10b750d4f06a7a3ae790b8a53fc</uuid>
+                    <uuid>a471be05213140c88873e860a39bcc52</uuid>
                     <name>Log PIX: worker.filacriptoFIN (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filacriptoFIN\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filacriptoFIN/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -211,10 +211,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>cd478e0839d549d7a57bc0391293b1de</uuid>
+                    <uuid>6da280308f8646cbac5cca3c4e571bcf</uuid>
                     <name>Log PIX: worker.filaentrada (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filaentrada\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Object reference not set to an instance of an object|Microsoft\.Data\.SqlClient\.SqlException \(0x80131904\)&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filaentrada/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Object reference not set to an instance of an object|Microsoft\.Data\.SqlClient\.SqlException \(0x80131904\)&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -227,10 +227,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>eddf36c073b54caea7916cf51bd5dcd8</uuid>
+                    <uuid>98649ed7566847ccbae77580f6b65fca</uuid>
                     <name>Log PIX: worker.filaentradaFIN (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filaentradaFIN\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Object reference not set to an instance of an object&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filaentradaFIN/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Object reference not set to an instance of an object&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -243,10 +243,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>6f5481cb36974d5f958a07061e7cd4ac</uuid>
+                    <uuid>f09d5a4740e244f79a025144477c089d</uuid>
                     <name>Log PIX: worker.filaentradaGEN (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filaentradaGEN\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filaentradaGEN/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -259,10 +259,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>7dac8583607f4353a5d1f130eb189190</uuid>
+                    <uuid>4ab3a1981f504270ad5167983ebf8354</uuid>
                     <name>Log PIX: worker.filaenvioapibacen (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filaenvioapibacen\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|No such host is known&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filaenvioapibacen/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|No such host is known&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -275,10 +275,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>e793b5618296432ab2daa09ba54dd221</uuid>
+                    <uuid>fd2ccfd51359472abeb3e05e18afbade</uuid>
                     <name>Log PIX: worker.filaenvioapibacenFIN (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filaenvioapibacenFIN\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Erro ao abrir a fila|No such host is known&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filaenvioapibacenFIN/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Erro ao abrir a fila|No such host is known&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -291,10 +291,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>0c29239ded014bfb98e1a63920ca29f0</uuid>
+                    <uuid>789b207d7c654df8b603e07d007ea1f3</uuid>
                     <name>Log PIX: worker.filaretornoapibacen (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filaretornoapibacen\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|No such host is known&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filaretornoapibacen/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|No such host is known&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -307,10 +307,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>c5d40cb5a7a54ab8bf0ff74396c0741a</uuid>
+                    <uuid>3a98b393b1594ae093e7f515ba3e0d57</uuid>
                     <name>Log PIX: worker.filastatus (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filastatus\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|A transport-level error has occurred when receiving results from the server&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filastatus/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|A transport-level error has occurred when receiving results from the server&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -323,10 +323,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>6c3287359240410f87682b413300bfef</uuid>
+                    <uuid>ded5aab978774504a8fa3ea518bad056</uuid>
                     <name>Log PIX: worker.filastatusFIN (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filastatusFIN\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filastatusFIN/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -339,10 +339,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>76c1d866ce58419b91435992260b3505</uuid>
+                    <uuid>3e60089373654d0b9c92ae0eff2e0152</uuid>
                     <name>Log PIX: worker.filastatusRSP (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filastatusRSP\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filastatusRSP/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -355,10 +355,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>d935834d7ae84be181171baf6dd82a95</uuid>
+                    <uuid>8c79c85bcb6c48dabdfdb2ff8b906243</uuid>
                     <name>Log PIX: worker.filaverificacaocredito (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.filaverificacaocredito\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.filaverificacaocredito/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -371,10 +371,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>8b4f4435d5b3479bb741107ab50f0357</uuid>
+                    <uuid>db86d5453c8f401eab6a3152c0caca33</uuid>
                     <name>Log PIX: worker.retornolegado (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.retornolegado\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.retornolegado/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -387,10 +387,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>e1be85269ce443db9c9eafc1b7f4091d</uuid>
+                    <uuid>7168b9b56b7049f1ba6b92b71da8a797</uuid>
                     <name>Log PIX: sincronismo (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-Dict-Worker\\sincronismo\\logs\\log.*\.txt&quot;,&quot;erro no download do arquivo de sincronismo&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-Dict-Worker/sincronismo/logs/log.*\\.txt&quot;,&quot;erro no download do arquivo de sincronismo&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -403,10 +403,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>9bbb5dffe3d9472d9c78ad2ebf61caeb</uuid>
+                    <uuid>1fb4f5365f48428595f556b9d5dde887</uuid>
                     <name>Log PIX: worker.tarefasautomaticas (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.tarefasautomaticas\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.tarefasautomaticas/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -419,10 +419,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>28c87106b975424ea4efda744d7931ab</uuid>
+                    <uuid>7f1a1eaca3244d7694cf0edb164e235e</uuid>
                     <name>Log PIX: worker.tratamentoretornoapibacen (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.tratamentoretornoapibacen\\logs\\log.*\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.tratamentoretornoapibacen/logs/log.*\\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -435,10 +435,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>36c557ea7b1d42cdb05b48932a4a0e01</uuid>
+                    <uuid>e59057ce8982490997a52319f759c9b4</uuid>
                     <name>Log PIX: worker.tratamentoretornoapibacenFIN (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.tratamentoretornoapibacenFIN\\logs\\log.*\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.tratamentoretornoapibacenFIN/logs/log.*\\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -451,10 +451,10 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>96228357dcba4707bdcb40eb40cf7005</uuid>
+                    <uuid>d591f06f2ffe4fbfa1ac40ed90ca94e2</uuid>
                     <name>Log PIX: worker.tratamentoretornoapibacenRSP (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
-                    <key>logrt[&quot;D:\\SPI-workers\\worker.tratamentoretornoapibacenRSP\\logs\\log.*\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip]</key>
+                    <key>logrt[&quot;D:/SPI-workers/worker.tratamentoretornoapibacenRSP/logs/log.*\\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip]</key>
                     <delay>1s</delay>
                     <history>7d</history>
                     <trends>0</trends>
@@ -471,197 +471,197 @@
     </templates>
     <triggers>
         <trigger>
-            <uuid>7a13a22bfc97412e891d9ed82d9beeae</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-Dict-Worker\\claims\\logs\\log.*\.log&quot;,&quot;The server was not found or was not accessible|The semaphore timeout period has expired|The request was canceled due to the configured HttpClient\.Timeout of 5 seconds elapsing&quot;,,,skip],5m)=0</expression>
+            <uuid>b008607bbcc5420bab58b03ed43f499d</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-Dict-Worker/claims/logs/log.*\\.log&quot;,&quot;The server was not found or was not accessible|The semaphore timeout period has expired|The request was canceled due to the configured HttpClient\.Timeout of 5 seconds elapsing&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em claims</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>4220b60f07034a81b590dff1ac63a76b</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-Dict-Worker\\gRPC\\logs\\log.*\.log&quot;,&quot;\[Error\] Erro Envio Bacen|No such host is known|The semaphore timeout period has expired&quot;,,,skip],5m)=0</expression>
+            <uuid>9f0c9cf6479243b6bb14d90d307da8a9</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-Dict-Worker/gRPC/logs/log.*\\.log&quot;,&quot;\[Error\] Erro Envio Bacen|No such host is known|The semaphore timeout period has expired&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em gRPC</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>7973535aab6846d2a82562dbf04b959f</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-Dict-Worker\\gRPC\\logs\\log.*\.txt&quot;,&quot;The SSL connection could not be established&quot;,,,skip],5m)=0</expression>
+            <uuid>1b79b6c2ba5c47ef86f5113b10c76803</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-Dict-Worker/gRPC/logs/log.*\\.txt&quot;,&quot;The SSL connection could not be established&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em gRPC</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>2a8a787eb05f4ce3a1133c68eb21a370</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.atualizacaolog\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement&quot;,,,skip],5m)=0</expression>
+            <uuid>b191bebe751c4f599191f1f799e0bbba</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.atualizacaolog/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.atualizacaolog</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>34cfcba9df6d48e685ca79604083144c</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.atualizacaologapibacen\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>99cab870b8804ff0b4f6e70147ed7db1</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.atualizacaologapibacen/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.atualizacaologapibacen</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>3253d21096074992a548cf55208a2dcb</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.atualizacaologbacen\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>0b40fd0274334847b4c1e92427344e2e</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.atualizacaologbacen/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.atualizacaologbacen</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>e18327ba06344727b40cc5a521685d8b</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.atualizacaologmensageria\\logs\\llog.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>32dea4288a924f819e0f933fdd7b41a7</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.atualizacaologmensageria/logs/llog.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.atualizacaologmensageria</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>7a850c9e2ffb4ccc9796ba3ca33e7b9c</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.atualizacaologretornobacen\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>5bb969a88f7c480e8f5ff5f8967e8591</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.atualizacaologretornobacen/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.atualizacaologretornobacen</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>6a4192d3959341f3a789f9b1154d4d2a</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.atualizacaosaldo\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>f0900e74cc564e3883f3d0218298f193</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.atualizacaosaldo/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.atualizacaosaldo</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>56faa389c0bb46b8837e77b59039d7eb</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.caching\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>93290924194649f7bf82e671143a2114</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.caching/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.caching</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>f59ee78cd09c41a2be5bb8a590ea8a7a</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filacripto\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>455ccd22eb454d1793b1c5b01018bcca</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filacripto/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filacripto</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>152049ed50184f00aa5c4fc94613133a</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filacriptoFIN\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>a9de70742e9a4c989f277d3fb0b9b668</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filacriptoFIN/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filacriptoFIN</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>6e4464a981c94433836c8e95aaefe3d9</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filaentrada\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Object reference not set to an instance of an object|Microsoft\.Data\.SqlClient\.SqlException \(0x80131904\)&quot;,,,skip],5m)=0</expression>
+            <uuid>b0a6faff03cd46878f3fd2e798f87af1</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filaentrada/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Object reference not set to an instance of an object|Microsoft\.Data\.SqlClient\.SqlException \(0x80131904\)&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filaentrada</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>edcad3af5381468fb09abafd19271ecd</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filaentradaFIN\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Object reference not set to an instance of an object&quot;,,,skip],5m)=0</expression>
+            <uuid>05a5b2d929b745c096a85a79b78e7a51</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filaentradaFIN/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Object reference not set to an instance of an object&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filaentradaFIN</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>97e01f0e60094213a3df02388665251b</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filaentradaGEN\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>6dc2a8ccf49f4add9bc71fe429ed30a4</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filaentradaGEN/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filaentradaGEN</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>336b5ba7bb1a42eca53f3a482598734c</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filaenvioapibacen\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|No such host is known&quot;,,,skip],5m)=0</expression>
+            <uuid>4e5998eddc9a48eeb4ce73b34b8921ab</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filaenvioapibacen/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|No such host is known&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filaenvioapibacen</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>510757dceb41404ca28aec78f7fcb19f</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filaenvioapibacenFIN\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Erro ao abrir a fila|No such host is known&quot;,,,skip],5m)=0</expression>
+            <uuid>a6b95bab3c754ebda18b1319b20b91e6</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filaenvioapibacenFIN/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Erro ao abrir a fila|No such host is known&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filaenvioapibacenFIN</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>69ad1dd4766d4d7bb2d581c0b265080e</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filaretornoapibacen\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|No such host is known&quot;,,,skip],5m)=0</expression>
+            <uuid>485a704890934267bad237883cd604df</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filaretornoapibacen/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|No such host is known&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filaretornoapibacen</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>4b82280558e14b33ae66fe8850aa3e90</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filastatus\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|A transport-level error has occurred when receiving results from the server&quot;,,,skip],5m)=0</expression>
+            <uuid>5ba43a2b61f4478db3fbfaac060859ff</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filastatus/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|A transport-level error has occurred when receiving results from the server&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filastatus</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>5c2d7ea9161444eda9d2a1f3da9e2817</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filastatusFIN\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>80b5c33f37bf4146b088ddb22e28e8ad</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filastatusFIN/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filastatusFIN</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>30f7f68d0e1449f68ea77057e67b6465</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filastatusRSP\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>e8e2fe5b0bb5424abe74daf57faba09c</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filastatusRSP/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filastatusRSP</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>bebd563f50ed4ee2961e7899184a391a</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.filaverificacaocredito\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>2435450463e145e08a4a610d56ba315e</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.filaverificacaocredito/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.filaverificacaocredito</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>44b79e672bd7460bb667f7ab178a0e0b</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.retornolegado\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>9d94cf456565419a95c72b5861eb0eda</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.retornolegado/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.retornolegado</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>81f44249605442acb361a7f44312e37b</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-Dict-Worker\\sincronismo\\logs\\log.*\.txt&quot;,&quot;erro no download do arquivo de sincronismo&quot;,,,skip],5m)=0</expression>
+            <uuid>b2555a818cb24ee48fcff59a059d3cd8</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-Dict-Worker/sincronismo/logs/log.*\\.txt&quot;,&quot;erro no download do arquivo de sincronismo&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em sincronismo</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>48d3c576a41f4b619f8cdc1c1b0c95eb</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.tarefasautomaticas\\logs\\log.*\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],5m)=0</expression>
+            <uuid>7298eb001f8e44ca95291042b707b8ec</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.tarefasautomaticas/logs/log.*\\.txt&quot;,&quot;does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.tarefasautomaticas</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>2520c53cfe744d3d87537aefe4127c5a</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.tratamentoretornoapibacen\\logs\\log.*\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip],5m)=0</expression>
+            <uuid>70a1b55e864d4dd7a240497c3418d676</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.tratamentoretornoapibacen/logs/log.*\\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.tratamentoretornoapibacen</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>c553e2d52cc24ff481deb5c448d80f14</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.tratamentoretornoapibacenFIN\\logs\\log.*\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip],5m)=0</expression>
+            <uuid>e62797fb50714f8d8389378f2a85467f</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.tratamentoretornoapibacenFIN/logs/log.*\\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.tratamentoretornoapibacenFIN</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <uuid>d8c35d7cdf9c4ce7bd02c3fb7e533735</uuid>
-            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:\\SPI-workers\\worker.tratamentoretornoapibacenRSP\\logs\\log.*\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip],5m)=0</expression>
+            <uuid>c79ead42ccd14ffd95a6b6a823b4d5e1</uuid>
+            <expression>nodata(/Template Monitoramento Logs PIX Automacao/logrt[&quot;D:/SPI-workers/worker.tratamentoretornoapibacenRSP/logs/log.*\\.txt&quot;,&quot;Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)&quot;,,,skip],15m)=0</expression>
             <name>Alerta PIX - Erro detectado em worker.tratamentoretornoapibacenRSP</name>
             <priority>HIGH</priority>
             <manual_close>YES</manual_close>
