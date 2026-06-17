@@ -3,20 +3,20 @@
     <version>7.0</version>
     <template_groups>
         <template_group>
-            <uuid>b8d2f6109bc349feb10cf5c2b24368b5</uuid>
+            <uuid>a051c89d596e4937b0d4ec39238f25c8</uuid>
             <name>Templates</name>
         </template_group>
     </template_groups>
     <templates>
         <template>
-            <uuid>4d0572a45edf49d89c24964f2a891dcb</uuid>
+            <uuid>a6d9ff7ac7664ab1866248e2f227b340</uuid>
             <template>Template Monitoramento Logs PIX</template>
             <name>Template Monitoramento Logs PIX</name>
-            <description>Monitoramento de logs PIX - v5. Triggers nos calculated items com {ITEM.LASTVALUE} para exibir count real.</description>
+            <description>Monitoramento de logs PIX - v6. Calculated items com count() correto. {ITEM.LASTVALUE} exibe count real no Problems.</description>
             <groups><group><name>Templates</name></group></groups>
             <items>
                 <item>
-                    <uuid>c92d0e2cf4334cb79f4c7b3c6c7ddcb9</uuid>
+                    <uuid>875d93528cc14b0ab96d1163ab9c5608</uuid>
                     <name>Log PIX - SPI-Dict-Worker Claims</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-Dict-Worker\claims\logs\log.*\.log","(The server was not found or was not accessible|The semaphore timeout period has expired|The request was canceled due to the configured HttpClient\.Timeout of 5 seconds elapsing)"]</key>
@@ -31,7 +31,7 @@
                     </tags>
                 </item>
                 <item>
-                    <uuid>dee74042ff5747239e41b9418df94252</uuid>
+                    <uuid>f333618fef86410494d20d5c6b28c7e2</uuid>
                     <name>PIX Count - SPI-Dict-Worker Claims: The server was not found or was not accessible</name>
                     <type>CALCULATED</type>
                     <key>pix.count[claims,0]</key>
@@ -47,7 +47,7 @@
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>9a677e494bb442b9a3f7d1c8c295c7a7</uuid>
+                            <uuid>768dfdbbef2f4cffb5ca4efe523b4206</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[claims,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[claims,0])=0</recovery_expression>
@@ -66,7 +66,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>eba8863a8f084508b522b8bd393651b1</uuid>
+                    <uuid>de8eae9739bf4575800dddaad97f7643</uuid>
                     <name>PIX Count - SPI-Dict-Worker Claims: The semaphore timeout period has expired</name>
                     <type>CALCULATED</type>
                     <key>pix.count[claims,1]</key>
@@ -82,7 +82,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>20fd2bebc788490d82d2267f3822122c</uuid>
+                            <uuid>913d911554984049a5762b2fb08f9a33</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[claims,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[claims,1])=0</recovery_expression>
@@ -101,7 +101,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>a6c38e1e6bab4a2e924baaa94a755946</uuid>
+                    <uuid>e3eb27ebe1ba4df4aa70fe8fe2716dab</uuid>
                     <name>PIX Count - SPI-Dict-Worker Claims: The request was canceled due to the configured HttpClient.Timeout of 5 seconds e</name>
                     <type>CALCULATED</type>
                     <key>pix.count[claims,2]</key>
@@ -117,7 +117,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>9665f4d86d384a49837243e49f652e27</uuid>
+                            <uuid>8263c8ccbe974c05b3621064b6a59366</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[claims,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[claims,2])=0</recovery_expression>
@@ -136,7 +136,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>7febc69d9d6241219be3a9b6c171d774</uuid>
+                    <uuid>a87079d741cb494b8d3a895ebf621656</uuid>
                     <name>Log PIX - SPI-Dict-Worker gRPC (log)</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-Dict-Worker\gRPC\logs\log.*\.log","(\[Error\] Erro Envio Bacen|No such host is known|The semaphore timeout period has expired)"]</key>
@@ -151,7 +151,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>3011843b32ec4c82bf508930e8607c93</uuid>
+                    <uuid>2e8b2cda8caf42ceb50029b83de93a76</uuid>
                     <name>PIX Count - SPI-Dict-Worker gRPC (log): [Error] Erro Envio Bacen</name>
                     <type>CALCULATED</type>
                     <key>pix.count[grpc_log,0]</key>
@@ -167,7 +167,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>23cf5c8920c2442396ebc2ba1afa515f</uuid>
+                            <uuid>cc71d743e83e4e2a989b9dc43691f606</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[grpc_log,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[grpc_log,0])=0</recovery_expression>
@@ -186,7 +186,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>56b1de80c2db4779b8c650e91d9424aa</uuid>
+                    <uuid>2dbccf9381c745e8a79da5273de73e2c</uuid>
                     <name>PIX Count - SPI-Dict-Worker gRPC (log): No such host is known</name>
                     <type>CALCULATED</type>
                     <key>pix.count[grpc_log,1]</key>
@@ -202,7 +202,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>b37449fdab424072a072ce4c52e06c74</uuid>
+                            <uuid>177ff9f6d9a14397bf1a3f217c2b8baa</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[grpc_log,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[grpc_log,1])=0</recovery_expression>
@@ -221,7 +221,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>ce69b3c8cd174329954b1b15c0eddd55</uuid>
+                    <uuid>4408a843e2d248549b6da093980b44f2</uuid>
                     <name>PIX Count - SPI-Dict-Worker gRPC (log): The semaphore timeout period has expired</name>
                     <type>CALCULATED</type>
                     <key>pix.count[grpc_log,2]</key>
@@ -237,7 +237,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>9413e1a2691e443eafe2df38362749c9</uuid>
+                            <uuid>e64270b8a102449eb8f5eb4f161b27ba</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[grpc_log,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[grpc_log,2])=0</recovery_expression>
@@ -256,7 +256,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>c56827e0a17a4f538c5a4373fce46d68</uuid>
+                    <uuid>06c2622bb56146af96747b607a572acd</uuid>
                     <name>Log PIX - SPI-Dict-Worker gRPC (txt)</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-Dict-Worker\gRPC\logs\log.*\.txt","(The SSL connection could not be established)"]</key>
@@ -271,7 +271,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>4fc0ffa8956b41a292a88f09cff0a633</uuid>
+                    <uuid>66578246ac5c4f7f8afc9c9c6ff0b7ec</uuid>
                     <name>PIX Count - SPI-Dict-Worker gRPC (txt): The SSL connection could not be established</name>
                     <type>CALCULATED</type>
                     <key>pix.count[grpc_txt,0]</key>
@@ -287,7 +287,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>2139c94a3fc6419da434a62ee49e7f0f</uuid>
+                            <uuid>d2a8553d4ed24761b5277051c761db67</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[grpc_txt,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[grpc_txt,0])=0</recovery_expression>
@@ -306,7 +306,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>efb042db8f2244e2921d816961f752cd</uuid>
+                    <uuid>302680b32cf64904919c7268c21fec2d</uuid>
                     <name>Log PIX - Worker AtualizacaoLog</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.atualizacaolog\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement)"]</key>
@@ -321,7 +321,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>247720c44c1e45f9a0ee32f4e894f106</uuid>
+                    <uuid>d73e1d200d9a4c038040b266be154517</uuid>
                     <name>PIX Count - Worker AtualizacaoLog: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaolog,0]</key>
@@ -337,7 +337,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>37998c36d27544719bf74b881bf2c8b8</uuid>
+                            <uuid>de79d7cf99fe412da7dda6062f2b9c3a</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaolog,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaolog,0])=0</recovery_expression>
@@ -356,7 +356,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>86c72d3a89834850b578e15e248567c3</uuid>
+                    <uuid>c4c78446621f42dd9e45878350a071ed</uuid>
                     <name>PIX Count - Worker AtualizacaoLog: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaolog,1]</key>
@@ -372,7 +372,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>4e81bf8ae9564a4aba9b014a04b17d97</uuid>
+                            <uuid>536ab8a2140f404ca874b4ae9ca9aced</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaolog,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaolog,1])=0</recovery_expression>
@@ -391,7 +391,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>da6f5c00ef80461487219b804b642d58</uuid>
+                    <uuid>a16827e2615b4910a8c0c2147e45b198</uuid>
                     <name>PIX Count - Worker AtualizacaoLog: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaolog,2]</key>
@@ -407,7 +407,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>41311f2a0be847da86db565d2bf8a518</uuid>
+                            <uuid>fab3fed1e9904e4283db16f6ad4c22f4</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaolog,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaolog,2])=0</recovery_expression>
@@ -426,7 +426,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>48fa51510d3946d09478b3ba29c150e1</uuid>
+                    <uuid>b6f1b8cea6cc4a6ea59b558ce69db168</uuid>
                     <name>PIX Count - Worker AtualizacaoLog: The timeout period elapsed while attempting to consume the pre-login handshake a</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaolog,3]</key>
@@ -442,7 +442,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>2958d25c044646e89d61ddce51115d77</uuid>
+                            <uuid>9a8cd3cc6e464573a83c2bb7f84bb341</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaolog,3])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaolog,3])=0</recovery_expression>
@@ -461,7 +461,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>d9f94e74571e4ad6b84c0682e831bf11</uuid>
+                    <uuid>3c139c94a22d4f52b131e5c41fb357c9</uuid>
                     <name>Log PIX - Worker AtualizacaoLogApiBacen</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.atualizacaologapibacen\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -476,7 +476,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>0c273f687d7e47849e0166e3dd07b64b</uuid>
+                    <uuid>46351b32a3ee4112b3c85330ac462468</uuid>
                     <name>PIX Count - Worker AtualizacaoLogApiBacen: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologapi,0]</key>
@@ -492,7 +492,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>b5c7b6294577446296eea8628f3548f8</uuid>
+                            <uuid>bc96be2660d3442ca5aa69db4b13131d</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologapi,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologapi,0])=0</recovery_expression>
@@ -511,7 +511,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>afe3b010a7bc4a8194d3f45e9bf7cf0b</uuid>
+                    <uuid>9f7af02b8cfd4c92a06076c7bfad9af6</uuid>
                     <name>PIX Count - Worker AtualizacaoLogApiBacen: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologapi,1]</key>
@@ -527,7 +527,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>4a1c3c3cb5bd47ce809821cc480e1622</uuid>
+                            <uuid>c0b409d224704620823c8e2e44e99ec1</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologapi,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologapi,1])=0</recovery_expression>
@@ -546,7 +546,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>72422c237fcf41649fd937ee642684c5</uuid>
+                    <uuid>875db36852af4a56a1cf3785b548f2d7</uuid>
                     <name>PIX Count - Worker AtualizacaoLogApiBacen: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologapi,2]</key>
@@ -562,7 +562,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>534f3bcab0674138b736626992f564a1</uuid>
+                            <uuid>3c12b65ba33d45589bf71cd5575bad53</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologapi,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologapi,2])=0</recovery_expression>
@@ -581,7 +581,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>a8af9aebe1c34018ab9631f197364bfb</uuid>
+                    <uuid>5b45d0b7133f4314952153addf501f7c</uuid>
                     <name>Log PIX - Worker AtualizacaoLogBacen</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.atualizacaologbacen\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -596,7 +596,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>cd185d5534804aaea7529185bd790743</uuid>
+                    <uuid>3f40238b1c0042599cb5768335ae9a44</uuid>
                     <name>PIX Count - Worker AtualizacaoLogBacen: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologbacen,0]</key>
@@ -612,7 +612,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>b889e318322e47b4a7df47a3630a2d17</uuid>
+                            <uuid>d27a70a97f974ca8b7b39aefc26eabe4</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologbacen,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologbacen,0])=0</recovery_expression>
@@ -631,7 +631,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>a1e3558e8c344683a0bb171b1ba66a14</uuid>
+                    <uuid>59a57de589374c619e65102977bf5258</uuid>
                     <name>PIX Count - Worker AtualizacaoLogBacen: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologbacen,1]</key>
@@ -647,7 +647,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>ad477dd00f464700bf1343d37132d18a</uuid>
+                            <uuid>f1395a5a47274d369a0583c5ccc1d4e3</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologbacen,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologbacen,1])=0</recovery_expression>
@@ -666,7 +666,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>a80818f9eb0b4a0fa3cfa96d1fb79776</uuid>
+                    <uuid>a80f970ea9124584a2f8ff1cc4abb35b</uuid>
                     <name>PIX Count - Worker AtualizacaoLogBacen: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologbacen,2]</key>
@@ -682,7 +682,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>20219ab183694783891eab11a80d1ef2</uuid>
+                            <uuid>5218e229e4d54e989a6a09c1e02e6d0f</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologbacen,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologbacen,2])=0</recovery_expression>
@@ -701,7 +701,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>06b025d51200457786a7b24374145e23</uuid>
+                    <uuid>2400111f76f54fb8ace6c106721da2d3</uuid>
                     <name>Log PIX - Worker AtualizacaoLogMensageria</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.atualizacaologmensageria\logs\llog.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -716,7 +716,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>255e97a0ee9c483ca63a24fa75a214de</uuid>
+                    <uuid>332f367675c944cfb27dab107b2b20f2</uuid>
                     <name>PIX Count - Worker AtualizacaoLogMensageria: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologmsg,0]</key>
@@ -732,7 +732,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>afdc44d082a54501b64036777bae34ec</uuid>
+                            <uuid>26c56e1977f54d598ec0c3a879c38719</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologmsg,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologmsg,0])=0</recovery_expression>
@@ -751,7 +751,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>d321827116424d2ebed7b163827e96e2</uuid>
+                    <uuid>f7959f10b9414e6d9a951c4fce0d2e1d</uuid>
                     <name>PIX Count - Worker AtualizacaoLogMensageria: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologmsg,1]</key>
@@ -767,7 +767,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>f77f96a204884c9badadca0284c00208</uuid>
+                            <uuid>cdc833ebc771409f8728306f47456bd7</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologmsg,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologmsg,1])=0</recovery_expression>
@@ -786,7 +786,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>1069fb8510874279ae55c28d181b1a37</uuid>
+                    <uuid>70b2fb886383451d8cd93d28c67b46d7</uuid>
                     <name>PIX Count - Worker AtualizacaoLogMensageria: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologmsg,2]</key>
@@ -802,7 +802,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>354198629d194373a8a2a8cfc7c4344c</uuid>
+                            <uuid>cfe5f4a9bcb14b60939e3d66cbcb6d8b</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologmsg,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologmsg,2])=0</recovery_expression>
@@ -821,7 +821,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>5c7bbab8acf64f0cad9a7b1a3a592749</uuid>
+                    <uuid>17b0893966f943ea81b4ebae78e7f1b7</uuid>
                     <name>Log PIX - Worker AtualizacaoLogRetornoBacen</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.atualizacaologretornobacen\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -836,7 +836,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>89eb486713bd44cc8062938f00d8a4de</uuid>
+                    <uuid>029653a96a84471387d157a273651b56</uuid>
                     <name>PIX Count - Worker AtualizacaoLogRetornoBacen: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologret,0]</key>
@@ -852,7 +852,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>a9158837b9844d538432637ecbd5a7e4</uuid>
+                            <uuid>bc8b02cf10074b67849aa20f0cc38284</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologret,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologret,0])=0</recovery_expression>
@@ -871,7 +871,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>e831a819479f4627831d3f421df25331</uuid>
+                    <uuid>1ba003b51c51471fa9517d7ee1bc7b69</uuid>
                     <name>PIX Count - Worker AtualizacaoLogRetornoBacen: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologret,1]</key>
@@ -887,7 +887,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>c204fed7c2fc4cc392e103b753c7028c</uuid>
+                            <uuid>aca56b3967774e1890ee971a2fce43d4</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologret,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologret,1])=0</recovery_expression>
@@ -906,7 +906,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>085001fa928e4072b92fd540a1efdc5f</uuid>
+                    <uuid>594f6579d8cb41f3a96e119bb657534f</uuid>
                     <name>PIX Count - Worker AtualizacaoLogRetornoBacen: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaologret,2]</key>
@@ -922,7 +922,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>5922056ac7af4647bf2a223367e5511b</uuid>
+                            <uuid>f259236dd0a54be7ac99d125c853e6f1</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologret,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaologret,2])=0</recovery_expression>
@@ -941,7 +941,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>c378ad7035ef4a3ca2355ca894d934a6</uuid>
+                    <uuid>ea5f8758552a4373a0b8a799807f5243</uuid>
                     <name>Log PIX - Worker AtualizacaoSaldo</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.atualizacaosaldo\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -956,7 +956,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>7a66d7d1625546d2b0bdc00419278e5d</uuid>
+                    <uuid>07a8629f19904e7aa3e6c9ea13e020f0</uuid>
                     <name>PIX Count - Worker AtualizacaoSaldo: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaosaldo,0]</key>
@@ -972,7 +972,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>22a582f2736147188e015748e77a3b88</uuid>
+                            <uuid>f5253fe87d954bffb6999f6bb702e821</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaosaldo,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaosaldo,0])=0</recovery_expression>
@@ -991,7 +991,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>9f66f5d43daa4f39a6f69a0798bbc985</uuid>
+                    <uuid>a6a7b11a4b9a408480b2cab82044770d</uuid>
                     <name>PIX Count - Worker AtualizacaoSaldo: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaosaldo,1]</key>
@@ -1007,7 +1007,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>364f6f0f99b74e62acc42d4430ef030e</uuid>
+                            <uuid>28b9ac769f7144a29a719efd4622931c</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaosaldo,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaosaldo,1])=0</recovery_expression>
@@ -1026,7 +1026,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>3f4b2ecd44f04ec3b10feb8c9d0f30ae</uuid>
+                    <uuid>4b7f1b8ba4b94fa08d51db242f459a49</uuid>
                     <name>PIX Count - Worker AtualizacaoSaldo: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[atualizacaosaldo,2]</key>
@@ -1042,7 +1042,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>c44fcb9a09974127a5cb0bc06a91d0de</uuid>
+                            <uuid>bfd87262e7394a2ca7ed05de6c1d10fe</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaosaldo,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[atualizacaosaldo,2])=0</recovery_expression>
@@ -1061,7 +1061,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>10b8f96ebf904777831337bfc1397957</uuid>
+                    <uuid>8e662157a6d14280ba5193938fee8848</uuid>
                     <name>Log PIX - Worker Caching</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.caching\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -1076,7 +1076,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>af6cfc78bde4473596ba89f01bca91ca</uuid>
+                    <uuid>c02b9eebcbbf4d7ea5c4437d3e4d99f6</uuid>
                     <name>PIX Count - Worker Caching: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[caching,0]</key>
@@ -1092,7 +1092,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>54a737ce3a7048c9b529b2f265c011d1</uuid>
+                            <uuid>b6368a06f154417bae1e277dfaa451de</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[caching,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[caching,0])=0</recovery_expression>
@@ -1111,7 +1111,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>a717d6de8cbc480f9dd24ac7c59609e0</uuid>
+                    <uuid>1d7379cc440e44009980c4764736cbd7</uuid>
                     <name>PIX Count - Worker Caching: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[caching,1]</key>
@@ -1127,7 +1127,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>854243bfe78848e4a78d9b835ed3409c</uuid>
+                            <uuid>32ea2d7e2ad14063b556f5d30ad84e30</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[caching,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[caching,1])=0</recovery_expression>
@@ -1146,7 +1146,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>5e700ab96fea4c64b1ee1cc0b408de1d</uuid>
+                    <uuid>b32b3a4d75f049929d2e542bdd38884d</uuid>
                     <name>PIX Count - Worker Caching: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[caching,2]</key>
@@ -1162,7 +1162,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>81cd5821952e4b4195e6b77512608f75</uuid>
+                            <uuid>b5eebf74d78d4248afaf7c1d1bd085df</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[caching,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[caching,2])=0</recovery_expression>
@@ -1181,7 +1181,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>9e0d4c3194f44d3aae6396f849bf850f</uuid>
+                    <uuid>8399c774f7cf43709b8d9916af39b63f</uuid>
                     <name>Log PIX - Worker FilaCripto</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filacripto\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -1196,7 +1196,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>7669d2f4ff7a485394066ba6fe1b2822</uuid>
+                    <uuid>f181cc7d82124702b81bf7d1a1d2b2bf</uuid>
                     <name>PIX Count - Worker FilaCripto: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filacripto,0]</key>
@@ -1212,7 +1212,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>0a809a54d48a4b1a9c82bf6278719cc4</uuid>
+                            <uuid>7de40a07ac0e477bb43bf506ad71dd6b</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filacripto,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filacripto,0])=0</recovery_expression>
@@ -1231,7 +1231,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>4fd54854c662486bbc25cb9c7478cfd2</uuid>
+                    <uuid>08054a7f878a4c8e82b9d7f71b3a269c</uuid>
                     <name>PIX Count - Worker FilaCripto: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filacripto,1]</key>
@@ -1247,7 +1247,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>71171e8aaddf4d8eb50e439356656cfd</uuid>
+                            <uuid>6928d84f6ae14eabbb72a39555eb5a4f</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filacripto,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filacripto,1])=0</recovery_expression>
@@ -1266,7 +1266,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>21ca73fa41ae4170953ac505d586097c</uuid>
+                    <uuid>52b06661029a4f7c81d8689804f2e5b2</uuid>
                     <name>PIX Count - Worker FilaCripto: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filacripto,2]</key>
@@ -1282,7 +1282,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>b4f6572603df43ff95cb0bf6a3bbc5a7</uuid>
+                            <uuid>cf33c9160d9c4a568fb6b6d2653d7c79</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filacripto,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filacripto,2])=0</recovery_expression>
@@ -1301,7 +1301,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>c9600cc1483f4c0c80e4a553261f32fc</uuid>
+                    <uuid>9f990d2d3ff94607b16e30ff3d5b1cbb</uuid>
                     <name>Log PIX - Worker FilaCriptoFIN</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filacriptoFIN\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -1316,7 +1316,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>8a08abb0b35e46f1a292e23590e90269</uuid>
+                    <uuid>1ab3102dad644a8da804c8fb2f1cda05</uuid>
                     <name>PIX Count - Worker FilaCriptoFIN: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filacriptofin,0]</key>
@@ -1332,7 +1332,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>a156e75b48c642f8a10388bd7b7a8c45</uuid>
+                            <uuid>6507aa9a9453427b934484dbaeea23c1</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filacriptofin,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filacriptofin,0])=0</recovery_expression>
@@ -1351,7 +1351,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>803afd8041a542d580f38480b4f718f1</uuid>
+                    <uuid>a086dd0e576e4ac1a949a6f3b7ae8673</uuid>
                     <name>PIX Count - Worker FilaCriptoFIN: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filacriptofin,1]</key>
@@ -1367,7 +1367,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>8a99e6d760fc48f1a78bf4a723ab0cfd</uuid>
+                            <uuid>6aa235442f27493c96ff7d718096c6b0</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filacriptofin,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filacriptofin,1])=0</recovery_expression>
@@ -1386,7 +1386,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>5666879706f848eabe52f3254de258fc</uuid>
+                    <uuid>179845c8090840f5b374d1515870cee1</uuid>
                     <name>PIX Count - Worker FilaCriptoFIN: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filacriptofin,2]</key>
@@ -1402,7 +1402,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>25c50881eaaf4d9da5366d34417746d0</uuid>
+                            <uuid>0f5749d818104ea1b5d641908d5e1094</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filacriptofin,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filacriptofin,2])=0</recovery_expression>
@@ -1421,7 +1421,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>7b0f6560036d45e29b89e8dfb5020e35</uuid>
+                    <uuid>f7af80e2a96c4dda8843b2f57fe13b3a</uuid>
                     <name>Log PIX - Worker FilaEntrada</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filaentrada\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Object reference not set to an instance of an object|Microsoft\.Data\.SqlClient\.SqlException \(0x80131904\))"]</key>
@@ -1436,7 +1436,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>4d928b64787c49ecad5f3975a4c5d400</uuid>
+                    <uuid>4d9f9f9bdf984bc69bf2581bd0af9690</uuid>
                     <name>PIX Count - Worker FilaEntrada: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentrada,0]</key>
@@ -1452,7 +1452,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>66f6a4ee654344528f57dd79a3b6814e</uuid>
+                            <uuid>57fb090662304dfeae48810e24c6fdfc</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentrada,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentrada,0])=0</recovery_expression>
@@ -1471,7 +1471,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>54f68d9c5ccd4d2eaa135d8095bdf8e5</uuid>
+                    <uuid>fbb37ef5a284436a843ea7747fa9a395</uuid>
                     <name>PIX Count - Worker FilaEntrada: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentrada,1]</key>
@@ -1487,7 +1487,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>8749d333da1b480fadf8f1793fde6e17</uuid>
+                            <uuid>4ceee7494c854dbe940dc64723bfac44</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentrada,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentrada,1])=0</recovery_expression>
@@ -1506,7 +1506,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>ba47e5255a834d038346fbac96c5a264</uuid>
+                    <uuid>276f2f79fd22464eb04dfa08c01debf2</uuid>
                     <name>PIX Count - Worker FilaEntrada: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentrada,2]</key>
@@ -1522,7 +1522,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>23c6f7825cf34f1984077b85efabaa98</uuid>
+                            <uuid>47d2243e0d7e4ff9b77977cbb340d52c</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentrada,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentrada,2])=0</recovery_expression>
@@ -1541,7 +1541,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>4d6ae8940b3e473bbf3da6b3ac180c51</uuid>
+                    <uuid>36ec25e3189646aaa39ec1c6e5441fe4</uuid>
                     <name>PIX Count - Worker FilaEntrada: Object reference not set to an instance of an object</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentrada,3]</key>
@@ -1557,7 +1557,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>ac2c03adfeb0484c95a86caf7a588acd</uuid>
+                            <uuid>e91119ab628141a28f71c6bcff6358a8</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentrada,3])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentrada,3])=0</recovery_expression>
@@ -1576,7 +1576,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>14c7185aaba047b095fb4502d9480ed2</uuid>
+                    <uuid>3368f6a67b864486b89ef8011bc2ea54</uuid>
                     <name>PIX Count - Worker FilaEntrada: Microsoft.Data.SqlClient.SqlException (0x80131904)</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentrada,4]</key>
@@ -1592,7 +1592,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>9a075fbb4ed249d7a0cd1bfa52cc8354</uuid>
+                            <uuid>7e66cc03936a4e55bcc447a72d8bbbbf</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentrada,4])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentrada,4])=0</recovery_expression>
@@ -1611,7 +1611,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>0b3ed6258b234057828f2f88b8981ece</uuid>
+                    <uuid>d4ed417ba9554a9fa8094bd4010a200a</uuid>
                     <name>Log PIX - Worker FilaEntradaFIN</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filaentradaFIN\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Object reference not set to an instance of an object)"]</key>
@@ -1626,7 +1626,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>d9ab2b40f22946db93b45aa396598711</uuid>
+                    <uuid>c6b7c06cd4194c6d96a32dc8e6489ec5</uuid>
                     <name>PIX Count - Worker FilaEntradaFIN: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentradafin,0]</key>
@@ -1642,7 +1642,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>bfe12a1c362641b486c820b4dbb7e735</uuid>
+                            <uuid>83139f40c64343f5bda60d4e48e741ae</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradafin,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradafin,0])=0</recovery_expression>
@@ -1661,7 +1661,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>aa5ab0ff702b4d80ae3d9328296967ea</uuid>
+                    <uuid>ba27c8adef4f4f52aed3bfc879e42fea</uuid>
                     <name>PIX Count - Worker FilaEntradaFIN: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentradafin,1]</key>
@@ -1677,7 +1677,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>17d2ad8df1a5484d86fb20a3f073dd9c</uuid>
+                            <uuid>4f39cdac82cc43d8a859a150339fd1a2</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradafin,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradafin,1])=0</recovery_expression>
@@ -1696,7 +1696,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>48698d47a3dc449db5c38f999902ed26</uuid>
+                    <uuid>6283fe71ed474ad696311361556bdc1f</uuid>
                     <name>PIX Count - Worker FilaEntradaFIN: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentradafin,2]</key>
@@ -1712,7 +1712,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>09e5900767b041feb376fc3023203d14</uuid>
+                            <uuid>8155f77f5386402db0e853905d4d2ebf</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradafin,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradafin,2])=0</recovery_expression>
@@ -1731,7 +1731,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>2255bf8412214b07ae3b1458db831936</uuid>
+                    <uuid>093d522bfe9a45aeaa215d33fc5419bb</uuid>
                     <name>PIX Count - Worker FilaEntradaFIN: Object reference not set to an instance of an object</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentradafin,3]</key>
@@ -1747,7 +1747,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>6d08a3fd0b8a4830b01eb1f712d0a538</uuid>
+                            <uuid>acc62c0981654631a7aab815435914cc</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradafin,3])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradafin,3])=0</recovery_expression>
@@ -1766,7 +1766,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>cb42b402eeff4084af94e99f5eea9407</uuid>
+                    <uuid>578e965d5469407bb8a7be673c824bd8</uuid>
                     <name>Log PIX - Worker FilaEntradaGEN</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filaentradaGEN\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -1781,7 +1781,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>3699d936a1fb402d974fe434adcd8018</uuid>
+                    <uuid>cf1d2ce74b864a7aade6a86a8fe21051</uuid>
                     <name>PIX Count - Worker FilaEntradaGEN: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentradagen,0]</key>
@@ -1797,7 +1797,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>a54b8ec5908841ee8105ba1e8123cd80</uuid>
+                            <uuid>9b342550d4b14c3189b9752598ed22f9</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradagen,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradagen,0])=0</recovery_expression>
@@ -1816,7 +1816,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>ccb800d4cf7845b0a6c0ec8ad966ff9f</uuid>
+                    <uuid>9e86374537e04d088782aa34bd8d45a5</uuid>
                     <name>PIX Count - Worker FilaEntradaGEN: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentradagen,1]</key>
@@ -1832,7 +1832,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>5414e1b6a226451490287043f4a8d061</uuid>
+                            <uuid>776baa0ff86b458f8e0af6ccee44ff88</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradagen,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradagen,1])=0</recovery_expression>
@@ -1851,7 +1851,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>9545bedfdd234d13aeb986746910206a</uuid>
+                    <uuid>5b4ff037f9b54f0296f58490c7f60b0e</uuid>
                     <name>PIX Count - Worker FilaEntradaGEN: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaentradagen,2]</key>
@@ -1867,7 +1867,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>cfcad95e4d12449193e2818c72ff98e2</uuid>
+                            <uuid>b23a210450cb4d35a3930ad88dd21f03</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradagen,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaentradagen,2])=0</recovery_expression>
@@ -1886,7 +1886,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>aafab9560ed24aa88bfb8a43f87d02ce</uuid>
+                    <uuid>f51e0e30dcd049a18cdc46cfbbe1b579</uuid>
                     <name>Log PIX - Worker FilaEnvioApiBacen</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filaenvioapibacen\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|No such host is known)"]</key>
@@ -1901,7 +1901,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>5be56ee91d8d4ff69046a4442200293d</uuid>
+                    <uuid>9d52c03ea39b4080bdf975d8a48559e7</uuid>
                     <name>PIX Count - Worker FilaEnvioApiBacen: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaenvioapibacen,0]</key>
@@ -1917,7 +1917,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>d1455227540b4d20967406e88377f0a6</uuid>
+                            <uuid>98d65e1289874fa49770f183cf9b85ad</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacen,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacen,0])=0</recovery_expression>
@@ -1936,7 +1936,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>5d27e3bc1ce1409c96e994922d56878a</uuid>
+                    <uuid>3234b89b19e64176a7368fb970060c0e</uuid>
                     <name>PIX Count - Worker FilaEnvioApiBacen: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaenvioapibacen,1]</key>
@@ -1952,7 +1952,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>296f0348fe0d42b895f9ace91a8f384e</uuid>
+                            <uuid>b84bd58420e942a4860092374a8b8fb1</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacen,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacen,1])=0</recovery_expression>
@@ -1971,7 +1971,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>288521d280964a709d3e22d18f7df3ab</uuid>
+                    <uuid>ff5ab4426a0b4991a19050d274394591</uuid>
                     <name>PIX Count - Worker FilaEnvioApiBacen: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaenvioapibacen,2]</key>
@@ -1987,7 +1987,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>e5227bf60a0147fcb4c2353131233e90</uuid>
+                            <uuid>fc668fed460740a68c056a2a1db30e6b</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacen,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacen,2])=0</recovery_expression>
@@ -2006,7 +2006,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>ef9724e778af41f0ad7635d861b22373</uuid>
+                    <uuid>b4b997c66be04752b7f693fa066b7031</uuid>
                     <name>PIX Count - Worker FilaEnvioApiBacen: No such host is known</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaenvioapibacen,3]</key>
@@ -2022,7 +2022,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>52d8809345ed44078784ed6731187931</uuid>
+                            <uuid>6fb16ad07a444795b95dff707705c4cd</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacen,3])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacen,3])=0</recovery_expression>
@@ -2041,7 +2041,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>daad0cb2074047fd9c518f9c1a45f3d5</uuid>
+                    <uuid>e100caca036c4e71a0dfadd4d8edb9ba</uuid>
                     <name>Log PIX - Worker FilaEnvioApiBacenFIN</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filaenvioapibacenFIN\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|Erro ao abrir a fila|No such host is known)"]</key>
@@ -2056,7 +2056,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>a125ee866fbd47448b8098cb628a38ed</uuid>
+                    <uuid>e0a3754210e543818fb0d966df6ef6b1</uuid>
                     <name>PIX Count - Worker FilaEnvioApiBacenFIN: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaenvioapibacenfin,0]</key>
@@ -2072,7 +2072,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>d406cdec7d554503b8f3ae826357b987</uuid>
+                            <uuid>d88c71318a924a4b8c6ec97804e42b4c</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacenfin,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacenfin,0])=0</recovery_expression>
@@ -2091,7 +2091,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>32f2dff22e9142b3b060d6dc9647d9b6</uuid>
+                    <uuid>a7bf110e4be04492a681a2dcede1d250</uuid>
                     <name>PIX Count - Worker FilaEnvioApiBacenFIN: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaenvioapibacenfin,1]</key>
@@ -2107,7 +2107,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>bf95fe2d6ad44df986a53ac2d0cfe8a7</uuid>
+                            <uuid>aa78b585e813401aa6b0f4a1f87fa326</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacenfin,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacenfin,1])=0</recovery_expression>
@@ -2126,7 +2126,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>b7bf91512ab048e18af7f8d1aa6ee148</uuid>
+                    <uuid>cbbd839a8ace4a8d852af713ecbffcfb</uuid>
                     <name>PIX Count - Worker FilaEnvioApiBacenFIN: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaenvioapibacenfin,2]</key>
@@ -2142,7 +2142,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>594d63934ef64828a70402162cfda26d</uuid>
+                            <uuid>2bd835ec4a874f738b42c79682ba6601</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacenfin,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacenfin,2])=0</recovery_expression>
@@ -2161,7 +2161,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>4f9cb3553c744b879e97637cf75b9548</uuid>
+                    <uuid>0983813bc33f4a19ac535e817bd200c9</uuid>
                     <name>PIX Count - Worker FilaEnvioApiBacenFIN: Erro ao abrir a fila</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaenvioapibacenfin,3]</key>
@@ -2177,7 +2177,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>1cae04b3851748bfa6ff07ea742cd42d</uuid>
+                            <uuid>6c6c1a34c3704dcda47109b35e75d587</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacenfin,3])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacenfin,3])=0</recovery_expression>
@@ -2196,7 +2196,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>819f4e8a765f46688a69a2dcfa9218f0</uuid>
+                    <uuid>76f4d1ab73af48b7b821da917d8c89f0</uuid>
                     <name>PIX Count - Worker FilaEnvioApiBacenFIN: No such host is known</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaenvioapibacenfin,4]</key>
@@ -2212,7 +2212,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>79132960395b412cb8044acfb5207c48</uuid>
+                            <uuid>88d8dbb75ab7412b81183bd7ef42e08d</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacenfin,4])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaenvioapibacenfin,4])=0</recovery_expression>
@@ -2231,7 +2231,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>f8ce5be01aa04ce6a0d7a4bf8e0c796e</uuid>
+                    <uuid>677cccd216b54f999a7ff9ba4df2eb90</uuid>
                     <name>Log PIX - Worker FilaRetornoApiBacen</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filaretornoapibacen\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|No such host is known)"]</key>
@@ -2246,7 +2246,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>b6b4592efcc84f2393bbda11fc331e28</uuid>
+                    <uuid>27b7318263a84e18b275f274fe2ece0e</uuid>
                     <name>PIX Count - Worker FilaRetornoApiBacen: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaretornoapibacen,0]</key>
@@ -2262,7 +2262,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>4f05bee1b96b4722afd5c653baff66d4</uuid>
+                            <uuid>addb6748a1cc41acb84402404adf8a62</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaretornoapibacen,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaretornoapibacen,0])=0</recovery_expression>
@@ -2281,7 +2281,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>e88fcc8b075543e38d310e908e7556c4</uuid>
+                    <uuid>8aeecba8885046b98ec9190c5995dcf0</uuid>
                     <name>PIX Count - Worker FilaRetornoApiBacen: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaretornoapibacen,1]</key>
@@ -2297,7 +2297,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>c1b2e79e781c4bc8b2db1bc5264f4966</uuid>
+                            <uuid>3407b5b10ba74955888714c54487f931</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaretornoapibacen,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaretornoapibacen,1])=0</recovery_expression>
@@ -2316,7 +2316,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>697f5d99a5dc40b6b6d7ea8bca80b146</uuid>
+                    <uuid>91e5f0bf3cd145e0b7fdd7c889efce08</uuid>
                     <name>PIX Count - Worker FilaRetornoApiBacen: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaretornoapibacen,2]</key>
@@ -2332,7 +2332,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>5782ddf7875940749e9399c36029c964</uuid>
+                            <uuid>a8bad6b1fa6a48778742524ee5d4605b</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaretornoapibacen,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaretornoapibacen,2])=0</recovery_expression>
@@ -2351,7 +2351,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>b748e4344ebd4cb3ad1378ad038edd01</uuid>
+                    <uuid>5c5bd5617aed4797bf09c66e4fa09fc8</uuid>
                     <name>PIX Count - Worker FilaRetornoApiBacen: No such host is known</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaretornoapibacen,3]</key>
@@ -2367,7 +2367,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>1614664017fc465bac7789429aaf917b</uuid>
+                            <uuid>43c1ff4fc54345c3a100e5bf128b8808</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaretornoapibacen,3])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaretornoapibacen,3])=0</recovery_expression>
@@ -2386,7 +2386,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>3abc089550814158b1f2dd6ab40e3e8b</uuid>
+                    <uuid>857f60bbcbec4f5faeb37ad489679d19</uuid>
                     <name>Log PIX - Worker FilaStatus</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filastatus\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE|A transport-level error has occurred when receiving results from the server)"]</key>
@@ -2401,7 +2401,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>c56a344064704a819d01e4dca6b504cb</uuid>
+                    <uuid>f860769048e64038aeb28e8ca9e9cae1</uuid>
                     <name>PIX Count - Worker FilaStatus: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filastatus,0]</key>
@@ -2417,7 +2417,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>15850de3b43343bbae32749eef66a5df</uuid>
+                            <uuid>1428eed724fb49a9ba158aaf02943ee0</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filastatus,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filastatus,0])=0</recovery_expression>
@@ -2436,7 +2436,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>bf15156d31a4405abced481daf2bcf6c</uuid>
+                    <uuid>b0733069320f4944985a9efee77007b9</uuid>
                     <name>PIX Count - Worker FilaStatus: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filastatus,1]</key>
@@ -2452,7 +2452,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>df7e0d311858492892286dc2f72594ed</uuid>
+                            <uuid>af49520b779e434d9c115d5d0eccd5fa</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filastatus,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filastatus,1])=0</recovery_expression>
@@ -2471,7 +2471,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>df9955ade2424837a0e0e47e19ca68ef</uuid>
+                    <uuid>2c2984a1cb2d44009d0f08e3e74cfa6c</uuid>
                     <name>PIX Count - Worker FilaStatus: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filastatus,2]</key>
@@ -2487,7 +2487,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>3ec3212904a744689499ad1e7172ad85</uuid>
+                            <uuid>85885f59129846e4a79e75ade04012b7</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filastatus,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filastatus,2])=0</recovery_expression>
@@ -2506,7 +2506,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>84b2ed0807a14720a7b1f40658646ef6</uuid>
+                    <uuid>0866fa50131b47cbbd44ab1a1cfbe630</uuid>
                     <name>PIX Count - Worker FilaStatus: A transport-level error has occurred when receiving results from the server</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filastatus,3]</key>
@@ -2522,7 +2522,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>f9218929705e4e57b947966e44cb34b4</uuid>
+                            <uuid>c000f16846b245409901c14cd715f4d8</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filastatus,3])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filastatus,3])=0</recovery_expression>
@@ -2541,7 +2541,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>983ba117eb884071a850533ab6fb226a</uuid>
+                    <uuid>ad924401b2384495b566650520716896</uuid>
                     <name>Log PIX - Worker FilaStatusFIN</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filastatusFIN\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -2556,7 +2556,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>18cc7833d96b439ea7977d8af6b93c98</uuid>
+                    <uuid>7f85336e90fe4abaa38b0571245e47da</uuid>
                     <name>PIX Count - Worker FilaStatusFIN: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filastatusfin,0]</key>
@@ -2572,7 +2572,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>2163c555b379451bae04022d437e8624</uuid>
+                            <uuid>78701b149d004ba89a7085126832f5f4</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusfin,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusfin,0])=0</recovery_expression>
@@ -2591,7 +2591,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>e19304c0511f453187f5fcd3edc08201</uuid>
+                    <uuid>45f05e2dee6f431eba3a5cce08827586</uuid>
                     <name>PIX Count - Worker FilaStatusFIN: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filastatusfin,1]</key>
@@ -2607,7 +2607,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>e83ed489974b49deb4f0316e7f6e0edf</uuid>
+                            <uuid>762e508d07f74641b19e5ca6f59fc2d2</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusfin,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusfin,1])=0</recovery_expression>
@@ -2626,7 +2626,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>c3bf723cb0674a12aecdbef6bd3c1395</uuid>
+                    <uuid>7649ff2bd31944cca67208f7f39447fc</uuid>
                     <name>PIX Count - Worker FilaStatusFIN: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filastatusfin,2]</key>
@@ -2642,7 +2642,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>adfb9e521ff34013818bb99f5b06f759</uuid>
+                            <uuid>e73a546758454a1cabb5911d187f070e</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusfin,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusfin,2])=0</recovery_expression>
@@ -2661,7 +2661,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>46ed60eef88d4af1aa12aeb09a49f6c0</uuid>
+                    <uuid>0774f9035e464b44a6a4ec81ffab3c1c</uuid>
                     <name>Log PIX - Worker FilaStatusRSP</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filastatusRSP\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -2676,7 +2676,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>cb4f12dd10a648b2836654baa2bb019b</uuid>
+                    <uuid>f7abfc3366414985871570b39126d501</uuid>
                     <name>PIX Count - Worker FilaStatusRSP: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filastatusrsp,0]</key>
@@ -2692,7 +2692,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>f9ba05e0c24549b6b295514e0677eac7</uuid>
+                            <uuid>76b3a8705f774bdab9a22c06dc1c8bd0</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusrsp,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusrsp,0])=0</recovery_expression>
@@ -2711,7 +2711,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>1d9f293df2744f43a816e52173c04d62</uuid>
+                    <uuid>2f9aa1c0a7074b7cbc1f2771df89880b</uuid>
                     <name>PIX Count - Worker FilaStatusRSP: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filastatusrsp,1]</key>
@@ -2727,7 +2727,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>b5d55a43eb0442b6bcdc0b855a0cb84f</uuid>
+                            <uuid>d8bfe7d152bb46218f7abfcb7f376b25</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusrsp,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusrsp,1])=0</recovery_expression>
@@ -2746,7 +2746,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>d52e2d7574144e1482b18dede1b72a31</uuid>
+                    <uuid>2fe497092f374f0daf3332918c43aba6</uuid>
                     <name>PIX Count - Worker FilaStatusRSP: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filastatusrsp,2]</key>
@@ -2762,7 +2762,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>f1d0de0eddf64991b2811d740a4e81b2</uuid>
+                            <uuid>1fe02e5cd3e54bc9b45fffbc66dfe387</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusrsp,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filastatusrsp,2])=0</recovery_expression>
@@ -2781,7 +2781,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>b034eb0ad4474193bbe3bb529edb41f2</uuid>
+                    <uuid>542631c3f46443789c2307728af44641</uuid>
                     <name>Log PIX - Worker FilaVerificacaoCredito</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.filaverificacaocredito\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -2796,7 +2796,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>d0a3f2c186f1420591158316013b269f</uuid>
+                    <uuid>641fbe1b7880430ba1f0ebed597f5353</uuid>
                     <name>PIX Count - Worker FilaVerificacaoCredito: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaverificacao,0]</key>
@@ -2812,7 +2812,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>e616ce16813e4f608502e482a872509f</uuid>
+                            <uuid>4cd15b8b867e40efac67b49457b2c79c</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaverificacao,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaverificacao,0])=0</recovery_expression>
@@ -2831,7 +2831,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>1065fe8f79d543078e4f8d593ae4b18a</uuid>
+                    <uuid>a07ace130c954f3d97051f43a243f664</uuid>
                     <name>PIX Count - Worker FilaVerificacaoCredito: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaverificacao,1]</key>
@@ -2847,7 +2847,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>efecabb70c2843c8a10291aa121998e8</uuid>
+                            <uuid>a25fa32068c64cd6bac23a8cc84d1b7e</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaverificacao,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaverificacao,1])=0</recovery_expression>
@@ -2866,7 +2866,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>742101fa68174f85a8c82e5833087b6e</uuid>
+                    <uuid>d86b9a4ada0144ad951c1745efcb21d3</uuid>
                     <name>PIX Count - Worker FilaVerificacaoCredito: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[filaverificacao,2]</key>
@@ -2882,7 +2882,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>0e5272c6aa924f43a842e0771f14126f</uuid>
+                            <uuid>6851b23efc794127a001e06be607c56b</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[filaverificacao,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[filaverificacao,2])=0</recovery_expression>
@@ -2901,7 +2901,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>a5b1763923e04d3a9ea622e6c3f01778</uuid>
+                    <uuid>a3a75efe794f44e5bcd96005fbca6d86</uuid>
                     <name>Log PIX - Worker RetornoLegado</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.retornolegado\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -2916,7 +2916,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>6aa9b21cec08486397183d17be1008a8</uuid>
+                    <uuid>a43b59571acc42ea8d5062c2a142eaf3</uuid>
                     <name>PIX Count - Worker RetornoLegado: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[retornolegado,0]</key>
@@ -2932,7 +2932,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>86bc16064d9d463597d0313c43a9b15e</uuid>
+                            <uuid>16d3d7ac8ff24481855e08ac72eb33d9</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[retornolegado,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[retornolegado,0])=0</recovery_expression>
@@ -2951,7 +2951,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>a9b3eda58bbc4c6ea0af09040ae3f55f</uuid>
+                    <uuid>ae66bac687f64ee3a0f9b706ea4bbc08</uuid>
                     <name>PIX Count - Worker RetornoLegado: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[retornolegado,1]</key>
@@ -2967,7 +2967,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>de6a118e18c440e1abf19791d10448cf</uuid>
+                            <uuid>9994b0f48ae248a29caa7b215d41f30c</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[retornolegado,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[retornolegado,1])=0</recovery_expression>
@@ -2986,7 +2986,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>464e740e2eaf4dc4899f4fd176a7ba5d</uuid>
+                    <uuid>be2be622ed7844529d4b999d3d4a0ef9</uuid>
                     <name>PIX Count - Worker RetornoLegado: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[retornolegado,2]</key>
@@ -3002,7 +3002,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>5eebed5cce244111a586dfc35437a048</uuid>
+                            <uuid>43361dd1446e4670b4d75305df58de77</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[retornolegado,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[retornolegado,2])=0</recovery_expression>
@@ -3021,7 +3021,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>75ae5ab2e62f47e18d5708f1ef2a3724</uuid>
+                    <uuid>bf4c8a5e90dd4729a324a77be0fa410f</uuid>
                     <name>Log PIX - SPI-Dict-Worker Sincronismo</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-Dict-Worker\sincronismo\logs\log.*\.txt","(erro no download do arquivo de sincronismo)"]</key>
@@ -3036,7 +3036,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>1bfeb072687742c2a84611dd1be03038</uuid>
+                    <uuid>287740c747264649b53aff8d00a17722</uuid>
                     <name>PIX Count - SPI-Dict-Worker Sincronismo: erro no download do arquivo de sincronismo</name>
                     <type>CALCULATED</type>
                     <key>pix.count[sincronismo,0]</key>
@@ -3052,7 +3052,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>5ad97b63df7f4b23af09f928d71d4c21</uuid>
+                            <uuid>0b62ad89c8294e89beba0dea81f08e66</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[sincronismo,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[sincronismo,0])=0</recovery_expression>
@@ -3071,7 +3071,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>be981b6c391f4ca4957f85bdb07ab4d4</uuid>
+                    <uuid>99916ba9aecd4b56bcad74123548c3ae</uuid>
                     <name>Log PIX - Worker TarefasAutomaticas</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.tarefasautomaticas\logs\log.*\.txt","(does not support MultipleActiveResultSets|Physical connection is not usable|MQRC_HOST_NOT_AVAILABLE)"]</key>
@@ -3086,7 +3086,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>c3a9674532424d4fb36ed55a01319a60</uuid>
+                    <uuid>1bca2fbaeae0492da3fd177abefb8d46</uuid>
                     <name>PIX Count - Worker TarefasAutomaticas: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tarefas,0]</key>
@@ -3102,7 +3102,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>b602d4cd89734caa8cecc9553fc9fed7</uuid>
+                            <uuid>7eaf4bfa26c64708afca29c19dad7486</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tarefas,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tarefas,0])=0</recovery_expression>
@@ -3121,7 +3121,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>3da62c9a4dde4127adc9c3113c08cd7c</uuid>
+                    <uuid>367dad00e99e407db8e13f19ddc8b9c7</uuid>
                     <name>PIX Count - Worker TarefasAutomaticas: Physical connection is not usable</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tarefas,1]</key>
@@ -3137,7 +3137,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>35b01600a5274abdb0769f5bf4380f1e</uuid>
+                            <uuid>8cda4856c2494e1d9218c44994ff9469</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tarefas,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tarefas,1])=0</recovery_expression>
@@ -3156,7 +3156,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>2291d2a5c3914f9eb1b6a67b0344adc2</uuid>
+                    <uuid>2461205e429749a289bf93ea8f5a61a4</uuid>
                     <name>PIX Count - Worker TarefasAutomaticas: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tarefas,2]</key>
@@ -3172,7 +3172,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>5a58c4ca80c7455dae2cced70d4e835c</uuid>
+                            <uuid>afdc210725ad495aab330c20dfb46e36</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tarefas,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tarefas,2])=0</recovery_expression>
@@ -3191,7 +3191,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>81f648624e224a5f882d2bdd92fd8fd5</uuid>
+                    <uuid>2fc44c96e5284d699db86802c4e677d7</uuid>
                     <name>Log PIX - Worker TratamentoRetornoApiBacen</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.tratamentoretornoapibacen\logs\log.*\.txt","(Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\))"]</key>
@@ -3206,7 +3206,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>7ef38553d3c0434ba7553e4e982cecea</uuid>
+                    <uuid>cbed127947784c6eb116f919c82ba917</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacen: Erro ao tentar reconectar C-ADO-SVPRD77:1425(CHN.SPI.DOCKER)</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacen,0]</key>
@@ -3222,7 +3222,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>0b8de2c473ee40998ada7ee9b5c53304</uuid>
+                            <uuid>4ab8d95bbf6743fcbd8b599469ccc1ba</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacen,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacen,0])=0</recovery_expression>
@@ -3241,7 +3241,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>ad2ed2ce1df54d32a9ef742e875c40a4</uuid>
+                    <uuid>4b020df9973243238521c7694f593a7e</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacen: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacen,1]</key>
@@ -3257,7 +3257,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>22c7004767fe471fa43c7f0eed8de0c8</uuid>
+                            <uuid>e957aff3be914640a0ee83bf5882c9ab</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacen,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacen,1])=0</recovery_expression>
@@ -3276,7 +3276,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>7c96beae9b60417cb46558112fd8a352</uuid>
+                    <uuid>3ae421b162ea4e5dbda2d4d56c19a0ab</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacen: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacen,2]</key>
@@ -3292,7 +3292,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>c6ce828cc4e24d278f09d68869531c1b</uuid>
+                            <uuid>fb19a70f82bb4e76998e7295eac8c190</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacen,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacen,2])=0</recovery_expression>
@@ -3311,7 +3311,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>fc4b215e1f474cb1b1b089c3e90101c7</uuid>
+                    <uuid>f8fed4543c2c4fe59df20ed8ca50c0a9</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacen: MQRC_CONNECTION_BROKEN</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacen,3]</key>
@@ -3327,7 +3327,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>7363c484067540ec9dbdce661b44e3e1</uuid>
+                            <uuid>001efc08b5b34aed95503e251067fe5e</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacen,3])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacen,3])=0</recovery_expression>
@@ -3346,7 +3346,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>3099a4693b43440284fee23e16755cb4</uuid>
+                    <uuid>e2554c7fcec64ebf8325ce3f014425cb</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacen: Reconectado C-ADO-SVPRD77:1425(CHN.SPI.DOCKER)</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacen,4]</key>
@@ -3362,7 +3362,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>285a293918444924b479022cbbbdd130</uuid>
+                            <uuid>15af119d67b2413c984a9c074d3d95ae</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacen,4])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacen,4])=0</recovery_expression>
@@ -3381,7 +3381,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>89a08e8d3ea24c1b8da9fa7cc3e6e2e8</uuid>
+                    <uuid>4e94db8f4abd4c909f40cbf665dcb27e</uuid>
                     <name>Log PIX - Worker TratamentoRetornoApiBacenFIN</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.tratamentoretornoapibacenFIN\logs\log.*\.txt","(Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\))"]</key>
@@ -3396,7 +3396,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>7725b99ff716474bb61326936b72e979</uuid>
+                    <uuid>e227ea80bf3d4fcb9ac85b4cb990512e</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacenFIN: Erro ao tentar reconectar C-ADO-SVPRD77:1425(CHN.SPI.DOCKER)</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacenfin,0]</key>
@@ -3412,7 +3412,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>60dd9d62ef9c4b6ba147d0b52f9ee300</uuid>
+                            <uuid>88c85fea203f411b998c72344d201c1c</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenfin,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenfin,0])=0</recovery_expression>
@@ -3431,7 +3431,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>15ef2e1ce8c940258f7284d9149fc3a8</uuid>
+                    <uuid>8160a774654f460c8cd026bd55c8c82f</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacenFIN: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacenfin,1]</key>
@@ -3447,7 +3447,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>dbb148d910094380966f89240e0da0a6</uuid>
+                            <uuid>4ea35cf6c7864872b8611f87ab2d104c</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenfin,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenfin,1])=0</recovery_expression>
@@ -3466,7 +3466,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>6e5b5d19710e4950bb1673581d9db654</uuid>
+                    <uuid>c0e79cd7b3b74cf6bd2675d8678b42bb</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacenFIN: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacenfin,2]</key>
@@ -3482,7 +3482,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>961dc9b72214437c905bc02eb9191f5b</uuid>
+                            <uuid>56d7e8410df14b34b65a0d2e1985cad6</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenfin,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenfin,2])=0</recovery_expression>
@@ -3501,7 +3501,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>371582b196ea438698f4fe158eb7a0c2</uuid>
+                    <uuid>fc74adc3f5864841abfbdd0854675666</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacenFIN: MQRC_CONNECTION_BROKEN</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacenfin,3]</key>
@@ -3517,7 +3517,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>f066e3724abe43178f632977eea803d0</uuid>
+                            <uuid>40f987d06c174532bc14a239a2452f58</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenfin,3])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenfin,3])=0</recovery_expression>
@@ -3536,7 +3536,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>c71829c59e9f42eda273aee57d2fafed</uuid>
+                    <uuid>d2ed507855a84e6e8f518991b2a56c13</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacenFIN: Reconectado C-ADO-SVPRD77:1425(CHN.SPI.DOCKER)</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacenfin,4]</key>
@@ -3552,7 +3552,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>876810544c9145c792a2504c8c3b42b4</uuid>
+                            <uuid>ba25a0fe6eb140e4bea40356b1ec1a33</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenfin,4])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenfin,4])=0</recovery_expression>
@@ -3571,7 +3571,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>200928b5f0ab4915bec1447075f067f2</uuid>
+                    <uuid>cc179432b4594527b6fc567c340399ad</uuid>
                     <name>Log PIX - Worker TratamentoRetornoApiBacenRSP</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>logrt["D:\SPI-workers\worker.tratamentoretornoapibacenRSP\logs\log.*\.txt","(Erro ao tentar reconectar C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\)|does not support MultipleActiveResultSets|MQRC_HOST_NOT_AVAILABLE|MQRC_CONNECTION_BROKEN|Reconectado C-ADO-SVPRD77:1425\(CHN\.SPI\.DOCKER\))"]</key>
@@ -3586,7 +3586,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                 </item>
                 <item>
-                    <uuid>0fbcc3dd9e15452089cf1558c017c324</uuid>
+                    <uuid>78721ad4c8e84a57a6cb7250c1eef42b</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacenRSP: Erro ao tentar reconectar C-ADO-SVPRD77:1425(CHN.SPI.DOCKER)</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacenrsp,0]</key>
@@ -3602,7 +3602,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>728508df9e614821a7e4100625584451</uuid>
+                            <uuid>ec4c33cd7798415bbdce6a861a8eac24</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenrsp,0])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenrsp,0])=0</recovery_expression>
@@ -3621,7 +3621,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>180b73acdc15486484c7454d5de66b39</uuid>
+                    <uuid>7ca37d5f38ae45eaa1306f3772fbbf3e</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacenRSP: does not support MultipleActiveResultSets</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacenrsp,1]</key>
@@ -3637,7 +3637,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>e411f1a15adc42ceb983a7c1f9c6fb6a</uuid>
+                            <uuid>bf13f22e151b4b9a8abd0d6ce75472bc</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenrsp,1])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenrsp,1])=0</recovery_expression>
@@ -3656,7 +3656,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>bb2ea4009a40419a915512c6144bbcff</uuid>
+                    <uuid>764d54f46139427e97a445403eceecee</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacenRSP: MQRC_HOST_NOT_AVAILABLE</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacenrsp,2]</key>
@@ -3672,7 +3672,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>9ebfbc94432d4f41b4c5b0c3b88b068e</uuid>
+                            <uuid>60fc5352749844a59ec03f2bcaf88ea4</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenrsp,2])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenrsp,2])=0</recovery_expression>
@@ -3691,7 +3691,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>defc381418d249bd8ee015e9112d716e</uuid>
+                    <uuid>d4aca196a8234f848d787e4edd642903</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacenRSP: MQRC_CONNECTION_BROKEN</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacenrsp,3]</key>
@@ -3707,7 +3707,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>361f6ce8756644c2b7589b5766e009c0</uuid>
+                            <uuid>ebd93383b04d4fe389071bd8997741f7</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenrsp,3])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenrsp,3])=0</recovery_expression>
@@ -3726,7 +3726,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </triggers>
                 </item>
                 <item>
-                    <uuid>d8f08791c5e242ce8bfa0d98a4468825</uuid>
+                    <uuid>10632866b4fd4f56a3c71bb19ea43613</uuid>
                     <name>PIX Count - Worker TratamentoRetornoApiBacenRSP: Reconectado C-ADO-SVPRD77:1425(CHN.SPI.DOCKER)</name>
                     <type>CALCULATED</type>
                     <key>pix.count[tratretapibacenrsp,4]</key>
@@ -3742,7 +3742,7 @@ O campo Count mostra ocorrencias dos ultimos 10 minutos.</description>
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>3264b19eb5564c5c8732feca8951a333</uuid>
+                            <uuid>8fdfe0664cfb4a0e9b5201a5317a4613</uuid>
                             <expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenrsp,4])&gt;0</expression>
                             <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
                             <recovery_expression>last(/Template Monitoramento Logs PIX/pix.count[tratretapibacenrsp,4])=0</recovery_expression>
